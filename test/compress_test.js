@@ -1,4 +1,5 @@
 var grunt = require("grunt");
+var fs = require("fs");
 
 grunt.loadTasks("../tasks");
 
@@ -6,7 +7,7 @@ exports.zip = {
   main: function(test) {
     function getSize(filename) {
       try {
-        return require("fs").statSync(filename).size;
+        return fs.statSync(filename).size;
       } catch (e) {
         return 0;
       }
