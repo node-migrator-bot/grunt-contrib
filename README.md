@@ -48,6 +48,9 @@ Optimize RequireJS projects using r.js.
 #### [`stylus`](/gruntjs/grunt-contrib/blob/master/docs/stylus.md)
 Compile Stylus files into CSS.
 
+#### [`yuidoc`](/gruntjs/grunt-contrib/blob/master/docs/yuidoc.md)
+Compile YUIDoc Documentation.
+
 ## Bugs
 
 Help us squash them by submitting an issue that describes how you encountered it; please be as specific as possible including operating system, node, grunt, and grunt-contrib versions.
