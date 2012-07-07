@@ -39,7 +39,7 @@ module.exports = function(grunt) {
       dest = grunt.template.process(dest);
       dest = _(dest).trim("/");
 
-      if (path.existsSync(dest) === false) {
+      if (fs.existsSync(dest) === false) {
         grunt.file.mkdir(dest);
       }
 
