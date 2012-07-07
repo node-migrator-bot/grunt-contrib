@@ -13,6 +13,7 @@ module.exports = function(grunt) {
   grunt.registerMultiTask("copy", "Copy files into another directory.", function() {
     var options = this.options({
       basePath: null,
+      flatten: false,
       processName: false,
       processContent: false,
       processContentExclude: []
@@ -49,7 +50,9 @@ module.exports = function(grunt) {
         filename = path.basename(srcFile);
         relative = path.dirname(srcFile);
 
-        if (options.basePath !== null && options.basePath.length > 1) {
+        if (options.flatten) {
+          relative = "";
+        } else if (options.basePath !== null && options.basePath.length > 1) {
           relative = _(relative).strRightBack(options.basePath);
           relative = _(relative).trim("/");
         }
